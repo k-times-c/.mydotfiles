@@ -1,0 +1,124 @@
+snippet S
+SELECT 
+endsnippet
+
+snippet s
+SELECT 
+endsnippet
+
+snippet F
+FROM 
+endsnippet
+
+snippet f
+FROM 
+endsnippet
+
+snippet W
+WHERE 
+endsnippet
+
+snippet w
+WHERE 
+endsnippet
+
+snippet L
+LIMIT
+endsnippet
+
+snippet l
+LIMIT
+endsnippet
+
+snippet sc*
+SELECT COUNT(*)
+endsnippet
+
+snippet g
+GROUP BY
+endsnippet
+
+snippet G
+GROUP BY
+endsnippet
+
+snippet h
+HAVING
+endsnippet
+
+snippet H
+HAVING
+endsnippet
+
+snippet jo
+JOIN ${1:table} ON ${2:table.field} = ${3:table.field}
+endsnippet
+
+snippet JO
+JOIN ${1:table} ON ${2:table.field} = ${3:table.field}
+endsnippet
+
+snippet ij
+INNER JOIN
+endsnippet
+
+snippet IJ
+INNER JOIN
+endsnippet
+
+snippet c
+COUNT(${1:FIELD})
+endsnippet
+
+snippet C
+COUNT(${1:FIELD})
+endsnippet
+
+snippet d
+DISTINCT
+endsnippet
+
+snippet D
+DISTINCT
+endsnippet
+
+# Outside snippets
+
+# snippet tbl
+# 	create table ${1:table} (
+# 		${0:columns}
+# 	);
+# endsnippet
+# snippet col
+# 	${1:name}	${2:type}	${3:default ''}	${0:not null}
+# endsnippet
+# snippet ccol
+# 	${1:name}	varchar2(${2:size})	${3:default ''}	${0:not null}
+# endsnippet
+# snippet ncol
+# 	${1:name}	number	${3:default 0}	${0:not null}
+# endsnippet
+# snippet dcol
+# 	${1:name}	date	${3:default sysdate}	${0:not null}
+# endsnippet
+# snippet ind
+# 	create index ${0:$1_$2} on ${1:table}(${2:column});
+# endsnippet
+# snippet uind
+# 	create unique index ${1:name} on ${2:table}(${0:column});
+# endsnippet
+# snippet tblcom
+# 	comment on table ${1:table} is '${0:comment}';
+# endsnippet
+# snippet colcom
+# 	comment on column ${1:table}.${2:column} is '${0:comment}';
+# endsnippet
+# snippet addcol
+# 	alter table ${1:table} add (${2:column} ${0:type});
+# endsnippet
+# snippet seq
+# 	create sequence ${1:name} start with ${2:1} increment by ${3:1} minvalue ${0:1};
+# endsnippet
+# snippet s*
+# 	select * from ${0:table}
+# endsnippet
