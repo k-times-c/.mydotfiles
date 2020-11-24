@@ -1,0 +1,18 @@
+[submodule ".vim/pack/my_plugins/start/vim-commentary"]
+	path = .vim/pack/my_plugins/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule ".vim/pack/my_plugins/start/vim-repeat"]
+	path = .vim/pack/my_plugins/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule ".vim/pack/my_plugins/start/vim-surround"]
+	path = .vim/pack/my_plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/pack/my_plugins/start/vim-unimpaired"]
+	path = .vim/pack/my_plugins/start/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+[submodule ".vim/pack/my_plugins/start/ultisnips"]
+	path = .vim/pack/my_plugins/start/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule ".vim/pack/my_plugins/start/vim-visual-star-search"]
+	path = .vim/pack/my_plugins/start/vim-visual-star-search
+	url = https://github.com/bronson/vim-visual-star-search.git

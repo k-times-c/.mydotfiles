@@ -1,15 +1,14 @@
 " VARIABLE ASSIGNMENTS 
-let $MYVIMRC="~/.vimrc"
-let $MYVIMDIR="~/.vim"
+" let $MYVIMRC="~/.vimrc"
+" let $MYVIMDIR="~/.vim"
 let $RTP="/usr/local/share/vim/vimfiles/"
 
 " VANILLA VIM SETTINGS
-    set nocompatible        "required
-    " filetype off            "required
-
-
+    set nocompatible		"required
+    filetype plugin indent on	"customized listing for each detected filetype go to “~/.vim/**/ftplugin/”
+    syntax enable		"use 'syntax on' to lock in default colors
     set history=400		"setting history to 400
-    set ruler		"show the cursor position
+    set ruler			"show the cursor position
     " set rnu			"turn relative line numbers on
     set showcmd			"showing incomplete commands
     set wildmenu		"shows a menu when using tab completion
@@ -20,13 +19,11 @@ let $RTP="/usr/local/share/vim/vimfiles/"
     set lbr			"setting up a better linewrap
     set spelllang=en_us 	"setting spell check to english
     runtime ftplugin/man.vim "can use the man pages within vim
-    set showcmd		"show the command as you're writing
     set ai			"setting up auto indent
     set si			"settin up smart indent
     "set nrformats=		"setting up decimal notation for arithmetic
     set hid			"setting hidden or switch through unsaved buffers
     set complete+=kspell	" Use word completion when spelling is enabled
-
     set softtabstop=4 	"Number of spaces inserted when inputting tab
     set tabstop=8		
     set shiftwidth=4
@@ -35,18 +32,13 @@ let $RTP="/usr/local/share/vim/vimfiles/"
     "set splitright		"default split is to the right of the file 
     " set noswapfile		"no swap files
     "set belloff=all
-
-    "setting viminfofile (see help viminfo to understand understand pattern)
+    "note: setting viminfofile (see :help viminfo to understand understand pattern)
     set viminfo='100,<1000,s100,!,%,h
-
     " set foldmethod=indent
     " set foldlevel=1
-
     set esckeys
     set ttimeoutlen=50	"delay from inputting to enacting a key mapping (50 default)
     set timeoutlen=400
-
-    syntax enable		"use 'syntax on' to lock in default colors
     set bg=dark			"ensuring vim knows the background
     set t_Co=256
     colorscheme solarized
@@ -54,11 +46,7 @@ let $RTP="/usr/local/share/vim/vimfiles/"
     highlight clear Terminal
     "set g:solarized_termtrans=1
 
-    filetype plugin indent on "To see a customized listing for each detected filetype go to “~/.vim/**/ftplugin/”
-
-
-
-    set rtp+=/usr/local/opt/fzf "for fzf
+    " set rtp+=/usr/local/opt/fzf "for fzf
     set shell=/bin/zsh 
     set mouse=a			" enabling mouse for vim
     "modifyOtherKeys (see help for more info) disabled
@@ -70,69 +58,29 @@ let $RTP="/usr/local/share/vim/vimfiles/"
     "let g:netrw_altv=1		"default window split is to the right
     let g:netrw_list_hide='*.swp,.*\.swp$,.*\.pyc$'  " ,.*.pyc'
     let g:solarized_diffmode="low"
-" PLUGINS (MANAGED BY MINPAC) 
-    " Try to load minpac.
-    packadd minpac
 
-    if !exists('*minpac#init')
-      " minpac is not available.
-
-      " Settings for plugin-less environment.
-      ...
-    else
-      " minpac is available.
-      call minpac#init()
-      call minpac#add('k-takata/minpac', {'type': 'opt'})
-
-      " Additional plugins here.
-      call minpac#add('tpope/vim-dispatch')
-      call minpac#add('tpope/vim-projectionist')
-      call minpac#add('tpope/vim-commentary')
-      call minpac#add('tmhedberg/matchit')
-      call minpac#add('tpope/vim-capslock')
-
-      call minpac#add('dense-analysis/ale')
-      call minpac#add('prettier/vim-prettier', {'type': 'opt'})
-      call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
-      call minpac#add('tpope/vim-surround')
-      call minpac#add('vim-scripts/taglist.vim')
-      call minpac#add('sheerun/vim-polyglot', {'type': 'opt'})
-      call minpac#add('junegunn/fzf', {'type': 'opt'})
-      call minpac#add('junegunn/fzf.vim', {'type': 'opt'})
-      call minpac#add('junegunn/vim-easy-align')
-      call minpac#add('SirVer/ultisnips')
-      call minpac#add('adriaanzon/vim-emmet-ultisnips')
-      " call minpac#add('honza/vim-snippets') "Saved in my documents directory files for... 'vImspiration'
-
-      call minpac#add('nelstrom/vim-visual-star-search')
-      call minpac#add('michaeljsmith/vim-indent-object')
-
-      call minpac#add('christoomey/vim-tmux-runner')
-      call minpac#add('janko/vim-test')
-      call minpac#add('vim-airline/vim-airline')
-      call minpac#add('tpope/vim-unimpaired')
-      call minpac#add('tpope/vim-repeat')
-      call minpac#add('habamax/vim-sendtoterm')
-      "
+" " PLUGINS (MANAGED BY MINPAC) 
+"       " Additional plugins here.
+"       call minpac#add('tpope/vim-commentary')
+"       call minpac#add('tpope/vim-capslock')
+"       call minpac#add('tmhedberg/matchit')
+"       call minpac#add('dense-analysis/ale')
+"       call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
+"       call minpac#add('tpope/vim-surround')
+"       call minpac#add('vim-scripts/taglist.vim')
+"       call minpac#add('sheerun/vim-polyglot', {'type': 'opt'})
+"       call minpac#add('junegunn/vim-easy-align')
+"       call minpac#add('SirVer/ultisnips')
+"       call minpac#add('nelstrom/vim-visual-star-search')
+"       call minpac#add('michaeljsmith/vim-indent-object')
+"       call minpac#add('janko/vim-test')
+"       call minpac#add('vim-airline/vim-airline')
+"       call minpac#add('tpope/vim-unimpaired')
+"       call minpac#add('tpope/vim-repeat')
 
       " Plugin settings here.
 	  let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
-	  let g:VtrOrientation = "h"
-    endif
-
-    " FZF mappings
-	nnoremap <silent> f :Files<CR>
-	nnoremap <silent> f<c-f> :Filetypes<CR>
-	nnoremap <silent> f :Buffers<CR>
-	nnoremap <silent> f<c-w> :Windows<CR>
-	nnoremap <silent> f<c-l> :Lines<CR>
-	nnoremap <silent> f<c-l><c-l> :BLines<CR>
-	nnoremap <silent> f :Tags<CR>
-	nnoremap <silent> f :Btags<CR>
-	nnoremap <silent> f<c-h> :History<CR>
-	nnoremap <silent> f :Commits<CR>
-	nnoremap <silent> f :Bcommits<CR>
-	nnoremap f<space>	:Locate 
+    " endif
 
     " common settings here.
 	"  ...
@@ -182,20 +130,20 @@ let $RTP="/usr/local/share/vim/vimfiles/"
     nnoremap [oa :ALEDisableBuffer<cr>
     nnoremap ]oa :ALEEnableBuffer<cr>
 
-    "Vtr Key Mappings
-	nnoremap <leader>atp   :VtrAttachToPane<cr>
-	nnoremap <leader>ror  :VtrReorientRunner<cr>
-	nnoremap <leader>sc   :VtrSendCommandToRunner<cr>
-	nnoremap <leader>sf   :VtrSendFile<cr>
-	nnoremap r<C-l>   :VtrSendLinesToRunner<cr>
-	xnoremap r<C-l>   :VtrSendLinesToRunner<cr>
-	nnoremap <leader>or   :VtrOpenRunner<cr>
-	nnoremap <leader>kr   :VtrKillRunner<cr>
-	nnoremap <leader>fr   :VtrFocusRunner<cr>
-	nnoremap <leader>dr   :VtrDetachRunner<cr>
-	nnoremap <leader>cr   :VtrClearRunner<cr>
-	nnoremap <leader>fc   :VtrFlushCommand<cr>
-	nnoremap <leader>sl   :VtrSendLinesToRunner<cr>
+    ""Vtr Key Mappings
+	"nnoremap <leader>atp   :VtrAttachToPane<cr>
+	"nnoremap <leader>ror  :VtrReorientRunner<cr>
+	"nnoremap <leader>sc   :VtrSendCommandToRunner<cr>
+	"nnoremap <leader>sf   :VtrSendFile<cr>
+	"nnoremap r<C-l>   :VtrSendLinesToRunner<cr>
+	"xnoremap r<C-l>   :VtrSendLinesToRunner<cr>
+	"nnoremap <leader>or   :VtrOpenRunner<cr>
+	"nnoremap <leader>kr   :VtrKillRunner<cr>
+	"nnoremap <leader>fr   :VtrFocusRunner<cr>
+	"nnoremap <leader>dr   :VtrDetachRunner<cr>
+	"nnoremap <leader>cr   :VtrClearRunner<cr>
+	"nnoremap <leader>fc   :VtrFlushCommand<cr>
+	"nnoremap <leader>sl   :VtrSendLinesToRunner<cr>
     
     "Netrw quick maps
     nnoremap <leader>e :e.<cr>

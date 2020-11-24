@@ -195,3 +195,4 @@ stty -ixon
 # git commands
 git config --global color.ui auto
 alias config='/usr/bin/git --git-dir=/Users/KXC/.mydotfiles/ --work-tree=/Users/KXC'
+alias tts="cd /Users/KXC/Documents/Code/Coding\ doodles/TTS_Work"
