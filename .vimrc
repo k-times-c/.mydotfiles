@@ -1,7 +1,7 @@
 " VARIABLE ASSIGNMENTS 
-" let $MYVIMRC="~/.vimrc"
-" let $MYVIMDIR="~/.vim"
-let $RTP="/usr/local/share/vim/vimfiles/"
+    " let $MYVIMRC="~/.vimrc"
+    " let $MYVIMDIR="~/.vim"
+    let $RTP="/usr/local/share/vim/vimfiles/"
 
 " VANILLA VIM SETTINGS
     set nocompatible		"required
@@ -50,7 +50,8 @@ let $RTP="/usr/local/share/vim/vimfiles/"
     set shell=/bin/zsh 
     set mouse=a			" enabling mouse for vim
     "modifyOtherKeys (see help for more info) disabled
-" NETRW SETTINGS
+    
+"NETRW SETTINGS
     let g:netrw_banner = 0		"no header banner
     let g:netrw_liststyle = 3	"default to tree style format
     "let g:netrw_winsize = 20	"default window size
@@ -58,33 +59,12 @@ let $RTP="/usr/local/share/vim/vimfiles/"
     "let g:netrw_altv=1		"default window split is to the right
     let g:netrw_list_hide='*.swp,.*\.swp$,.*\.pyc$'  " ,.*.pyc'
     let g:solarized_diffmode="low"
+    
 
-" " PLUGINS (MANAGED BY MINPAC) 
-"       " Additional plugins here.
-"       call minpac#add('tpope/vim-commentary')
-"       call minpac#add('tpope/vim-capslock')
-"       call minpac#add('tmhedberg/matchit')
-"       call minpac#add('dense-analysis/ale')
-"       call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
-"       call minpac#add('tpope/vim-surround')
-"       call minpac#add('vim-scripts/taglist.vim')
-"       call minpac#add('sheerun/vim-polyglot', {'type': 'opt'})
-"       call minpac#add('junegunn/vim-easy-align')
-"       call minpac#add('SirVer/ultisnips')
-"       call minpac#add('nelstrom/vim-visual-star-search')
-"       call minpac#add('michaeljsmith/vim-indent-object')
-"       call minpac#add('janko/vim-test')
-"       call minpac#add('vim-airline/vim-airline')
-"       call minpac#add('tpope/vim-unimpaired')
-"       call minpac#add('tpope/vim-repeat')
-
-      " Plugin settings here.
+  "PLUGIN SETTINGS HERE.
 	  let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
-    " endif
 
-    " common settings here.
-	"  ...
-	"  vim-test settings (and mappings)
+    	"  vim-test settings (and mappings)
 	 
 	    let test#strategy = 'dispatch'
 	    let test#python#runner = 'pyunit'
@@ -98,14 +78,7 @@ let $RTP="/usr/local/share/vim/vimfiles/"
 	    nmap <silent> t<C-s> :TestSuite<CR>
 	    nmap <silent> t<C-l> :TestLast<CR>
 	    nmap <silent> t<C-g> :TestVisit<CR>
-	
-    
 
-
-	" Start interactive EasyAlign in visual mode (e.g. vipga)
-	    xmap gl <Plug>(EasyAlign)
-	" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-	    nmap gl <Plug>(EasyAlign)
 " GLOBAL ALIASES
     command! PackUpdate call minpac#update()
     command! PackClean call minpac#clean()
@@ -130,7 +103,7 @@ let $RTP="/usr/local/share/vim/vimfiles/"
     nnoremap [oa :ALEDisableBuffer<cr>
     nnoremap ]oa :ALEEnableBuffer<cr>
 
-    ""Vtr Key Mappings
+    ""VTR KEY MAPPINGS
 	"nnoremap <leader>atp   :VtrAttachToPane<cr>
 	"nnoremap <leader>ror  :VtrReorientRunner<cr>
 	"nnoremap <leader>sc   :VtrSendCommandToRunner<cr>
