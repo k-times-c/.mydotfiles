@@ -122,7 +122,8 @@ alias vimgolf="/usr/local/lib/ruby/gems/2.6.0/gems/vimgolf-0.4.8/bin/vimgolf"
 alias cmu="~/Documents/Code/engagements/cmu"
 alias JSC='/Users/KXC/Documents/MyClasses/IntroToJavascipt/complete-javascript-course/9-forkify/starter'
 alias CHW='~/Documents/Code/CognizantHW/current_hw/python_files/src/'
-
+alias prof='vim ~/.zshrc'
+alias reprof='source ~/.zshrc'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
