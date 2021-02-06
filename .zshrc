@@ -197,3 +197,4 @@ stty -ixon
 git config --global color.ui auto
 alias config='/usr/bin/git --git-dir=/Users/KXC/.mydotfiles/ --work-tree=/Users/KXC'
 alias tts="cd /Users/KXC/Documents/Code/Coding\ doodles/TTS_Work"
+alias kbr="vim /Users/KXC/.config/karabiner/karabiner.json"
